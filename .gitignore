@@ -1,0 +1,74 @@
+# =========================================================
+# 1. User Presets, Runtime Audit Logs, Secrets & Local Configs
+# =========================================================
+presets/
+logs/
+*.log
+*.jsonl
+
+.env
+.env.*
+!.env.example
+config.json
+config.yaml
+config.yml
+config.toml
+config.ini
+settings.json
+*.local.json
+*.pem
+*.key
+*.pfx
+*secret*
+*credential*
+*token*
+!*.example
+!*.example.*
+!examples/**
+
+# =========================================================
+# 2. Python Virtual Environments, Caches & Build Outputs
+# =========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+out/
+release/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================================================
+# 3. Compiled Binaries, Debug Symbols & OS/IDE Metadata
+# =========================================================
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.obj
+*.zip
+*.7z
+*.rar
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.swp
+*.swo
+*.tmp
+*.temp
+.vs/
+.idea/
+.vscode/*
+!.vscode/extensions.json

@@ -1,0 +1,3 @@
+.\autotool.bat gui
+
+pause

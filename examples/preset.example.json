@@ -1,0 +1,75 @@
+{
+  "name": "notepad_type_demo",
+  "kind": "single",
+  "description": "示例预设：定位记事本编辑区并输入动态参数文本",
+  "locator": {
+    "id": "process_automation_id",
+    "label": "进程 → AutomationId",
+    "description": "在 Notepad.exe 中定位文本编辑控件并点击中心位置",
+    "confidence": "high",
+    "strategy_type": "process_name_offset",
+    "process_name": "notepad.exe",
+    "window_title": "",
+    "window_title_match": "ignore",
+    "window_class": "Notepad",
+    "control_type": "DocumentControl",
+    "automation_id": "",
+    "automation_id_match": "ignore",
+    "control_name": "",
+    "control_name_match": "ignore",
+    "class_name": "",
+    "target_width": null,
+    "target_height": null,
+    "size_tolerance": 6,
+    "tree_path": [],
+    "template_image_b64": "",
+    "template_image_path": "",
+    "similarity_threshold": 0.85,
+    "image_grayscale": false,
+    "search_in_window": false,
+    "anchor_mode": "center",
+    "offset_x": 0.5,
+    "offset_y": 0.5,
+    "timeout_ms": 3000,
+    "activate_window": true
+  },
+  "parameters": [
+    {
+      "name": "text",
+      "param_type": "string",
+      "default": "Hello AutoTool!",
+      "description": "要输入的文本内容"
+    }
+  ],
+  "actions": [
+    {
+      "type": "left_click",
+      "use_target": true,
+      "offset_dx": 0,
+      "offset_dy": 0,
+      "duration_ms": 0,
+      "key": "",
+      "text": "",
+      "use_clipboard": false,
+      "interval_ms": 25,
+      "ms": "200",
+      "note": "聚焦编辑框"
+    },
+    {
+      "type": "text_input",
+      "use_target": false,
+      "offset_dx": 0,
+      "offset_dy": 0,
+      "duration_ms": 0,
+      "key": "",
+      "text": "{{text}}",
+      "use_clipboard": false,
+      "interval_ms": 25,
+      "ms": "200",
+      "note": "输入模板参数文本"
+    }
+  ],
+  "group_items": [],
+  "created_at": "2026-11-27T00:00:00+00:00",
+  "updated_at": "2026-11-27T00:00:00+00:00"
+}
